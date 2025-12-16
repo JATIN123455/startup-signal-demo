@@ -1,18 +1,6 @@
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+import os
 
-def export_to_sheets(df, sheet_id):
-    scope = [
-        "https://spreadsheets.google.com/feeds",
-        "https://www.googleapis.com/auth/drive"
-    ]
-
-    creds = ServiceAccountCredentials.from_json_keyfile_name(
-        "credentials.json", scope
-    )
-    client = gspread.authorize(creds)
-
-    sheet = client.open_by_key(sheet_id)
-    ws = sheet.sheet1
-    ws.clear()
-    ws.update([df.columns.tolist()] + df.values.tolist())
+def export_to_csv(df, filename="output/startup_signal_output.csv"):
+    os.makedirs("output", exist_ok=True)
+    df.to_csv(filename, index=False)
+    print(f"CSV exported to {filename}")
