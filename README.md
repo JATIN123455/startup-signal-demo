@@ -3,14 +3,13 @@
 This project demonstrates a reproducible data pipeline that processes
 startup funding data and generates hiring signals.
 
-## What it does
-- Ingests startup data from CSV
-- Cleans and deduplicates records
-- Generates hiring and funding signals
-- Exports structured output to Google Sheets
+## How it works
+1. Reads startup data from CSV
+2. Cleans and deduplicates records
+3. Generates hiring and funding signals
+4. Exports results to Google Sheets
 
-## How to Run
-
+## How to run
 ```bash
 pip install -r requirements.txt
 python src/main.py
