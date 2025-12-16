@@ -1,0 +1,5 @@
+Add Sample Input Data
+company,website,funding_amount,round,country,careers_url
+Neros,https://neros.tech,75000000,Series B,USA,https://job-boards.greenhouse.io/nerostechnology
+AirOps,https://airops.com,40000000,Series B,USA,https://jobs.ashbyhq.com/airops
+Zerodha,https://zerodha.com,0,Bootstrapped,India,https://zerodha.com/careers
